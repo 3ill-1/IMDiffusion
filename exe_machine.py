@@ -18,7 +18,7 @@ parser.add_argument("--testmissingratio", type=float, default=0.1)
 parser.add_argument("--modelfolder", type=str, default="")
 
 parser.add_argument("--ratio",type=float,default=0.7)
-parser.add_argument("--epochs",type=int,default=100)
+parser.add_argument("--epochs",type=int,default=3)
 parser.add_argument("--dataset",type=str,default="SMD")
 args = parser.parse_args()
 
@@ -69,7 +69,7 @@ except:
     pass
 
 
-for training_epoch in range(0,6):
+for training_epoch in range(0,3):
     print(f"begin to train for training_epoch {training_epoch} ...")
     try:
         os.mkdir(f"train_result/save{training_epoch}")
